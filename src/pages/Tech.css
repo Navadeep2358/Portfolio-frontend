@@ -108,6 +108,7 @@
     height: 160px;
   }
 }
+
 /* =====================================
    UPSIDE DOWN MODE OVERRIDES
    (reacts to body.upside)
@@ -165,10 +166,59 @@ body.upside .score-card p {
 body.upside .score-card h3 {
   color: #ffb4b4;
 }
+
 /* REMOVE UNDERLINES FROM PROFILE CARDS */
 .profile-card,
 .profile-card:hover,
 .profile-card:focus,
 .profile-card:active {
   text-decoration: none;
+}
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .tech-page {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-page {
+    max-width: 92%;
+  }
+
+  .tech-title {
+    margin-bottom: 2rem;
+  }
+
+  .tech-track {
+    gap: 1.4rem;
+  }
+
+  .scores-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-page {
+    max-width: 94%;
+  }
+
+  .tech-card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .tech-card span {
+    font-size: 0.85rem;
+  }
+
+  .score-card {
+    padding: 1.4rem;
+  }
 }

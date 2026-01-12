@@ -23,3 +23,39 @@
   margin: 0 auto 120px auto;
   padding: 0 24px;
 }
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .section {
+    max-width: 95%;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding-top: 72px; /* navbar still safe */
+  }
+
+  .section {
+    max-width: 92%;
+    margin-bottom: 90px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .page {
+    padding-top: 68px;
+  }
+
+  .section {
+    max-width: 94%;
+    margin-bottom: 80px;
+    padding: 0 16px;
+  }
+}

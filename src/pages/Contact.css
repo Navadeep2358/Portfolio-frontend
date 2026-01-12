@@ -162,3 +162,57 @@ body.upside .contact-card button {
 body.upside .contact-card button:hover {
   box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
 }
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .contact-section {
+    padding: 70px 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    width: 100%;
+    max-width: 420px;
+    padding: 36px;
+  }
+
+  .contact-card h1 {
+    font-size: 26px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+    margin-bottom: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 60px 14px;
+  }
+
+  .contact-card {
+    max-width: 100%;
+    padding: 28px 22px;
+  }
+
+  .contact-card h1 {
+    font-size: 24px;
+  }
+
+  .contact-card input,
+  .contact-card textarea {
+    font-size: 15px;
+    padding: 15px;
+  }
+
+  .contact-card button {
+    padding: 15px;
+    font-size: 15px;
+  }
+}

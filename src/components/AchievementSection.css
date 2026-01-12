@@ -29,6 +29,7 @@
   line-height: 1.6;
   margin-bottom: 1.6rem;
 }
+
 /* UPSIDE MODE – RED SHADOW */
 body.upside .achievement-card {
   border-color: rgba(180,0,0,0.35);
@@ -39,6 +40,7 @@ body.upside .achievement-card:hover {
     0 0 30px rgba(180,0,0,0.6),
     0 0 70px rgba(120,0,0,0.45);
 }
+
 /* ===============================
    RECTANGULAR MEDIA CARDS
 ================================ */
@@ -107,5 +109,52 @@ body.upside .cert-rect.active {
   .cert-rect {
     width: 240px;
     height: 150px;
+  }
+}
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .achievement-card {
+    padding: 1.8rem;
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievement-card {
+    padding: 1.6rem;
+    margin-top: 40px;
+  }
+
+  .achievement-title {
+    font-size: 1.3rem;
+  }
+
+  .achievement-desc {
+    font-size: 0.92rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievement-card {
+    padding: 1.4rem;
+    margin-top: 32px;
+  }
+
+  .achievement-title {
+    font-size: 1.2rem;
+  }
+
+  .achievement-desc {
+    font-size: 0.9rem;
+  }
+
+  .cert-rect {
+    width: 220px;
+    height: 140px;
   }
 }

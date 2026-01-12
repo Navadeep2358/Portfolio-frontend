@@ -70,6 +70,7 @@
     font-size: 1.2rem;
   }
 }
+
 /* ===============================
    UPSIDE MODE – PROJECTS RED SHADOW
 ================================ */
@@ -93,4 +94,52 @@ body.upside .project-links a {
 body.upside .project-links a:hover {
   background: #dc2626;
   color: #020617;
+}
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .projects-page {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-page {
+    max-width: 92%;
+  }
+
+  .projects-title {
+    margin-bottom: 2.4rem;
+  }
+
+  .project-content p {
+    font-size: 0.92rem;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-page {
+    max-width: 94%;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+
+  .project-links a {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
 }

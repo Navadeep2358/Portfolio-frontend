@@ -51,6 +51,7 @@ body.upside .fixed-footer a {
 body.upside .fixed-footer a:hover {
   color: #f87171;
 }
+
 .fixed-footer {
   position: fixed;
   bottom: 0;
@@ -103,4 +104,31 @@ body.upside .fixed-footer a {
 
 body.upside .fixed-footer a:hover {
   color: #f87171;
+}
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 768px) {
+  .fixed-footer {
+    height: 64px;
+    gap: 22px;
+  }
+
+  .fixed-footer a {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .fixed-footer {
+    height: 60px;
+    gap: 18px;
+  }
+
+  .fixed-footer a {
+    font-size: 1.15rem;
+  }
 }

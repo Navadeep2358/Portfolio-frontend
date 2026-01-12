@@ -98,6 +98,7 @@
     gap: 1.5rem;
   }
 }
+
 /* ===============================
    UPSIDE MODE – CERTIFICATIONS RED SHADOW
 ================================ */
@@ -121,4 +122,36 @@ body.upside .cert-btn {
 body.upside .cert-btn:hover {
   background: #dc2626;
   color: #020617;
+}
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .certs-page {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .certs-page {
+    max-width: 92%;
+  }
+
+  .cert-title {
+    margin-bottom: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certs-page {
+    max-width: 94%;
+  }
+
+  .cert-circle span {
+    font-size: 0.85rem;
+    text-align: center;
+  }
 }

@@ -12,3 +12,30 @@
   object-fit: cover;   /* Netflix-style full screen */
   background: #000;
 }
+
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .intro-video {
+    object-position: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .intro-root {
+    overscroll-behavior: none;
+  }
+
+  .intro-video {
+    object-position: center center;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-video {
+    object-position: center center;
+  }
+}

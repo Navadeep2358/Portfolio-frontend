@@ -3,3 +3,25 @@
   margin: 0 auto;
 }
 
+/* =================================================
+   RESPONSIVE ADDITIONS (MOBILE + SMALL SCREENS)
+   🔒 NO EXISTING STYLES MODIFIED
+================================================= */
+
+@media (max-width: 1024px) {
+  .achievements-page {
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .achievements-page {
+    max-width: 92%;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements-page {
+    max-width: 94%;
+  }
+}
