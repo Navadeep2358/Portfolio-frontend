@@ -1,0 +1,172 @@
+/* ===============================
+   NORMAL MODE BACKGROUND
+================================ */
+html {
+  overscroll-behavior: none;
+}
+body {
+  background: radial-gradient(ellipse at bottom, #020617 0%, #000 100%);
+  color: #e5e7eb;
+  overscroll-behavior: none;
+}
+
+/* ===============================
+   STAR BACKGROUND
+================================ */
+.star-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,100% { opacity: 0.3 }
+  50% { opacity: 1 }
+}
+
+/* ===============================
+   SHOOTING STAR
+================================ */
+.shooting-star {
+  position: fixed;
+  width: 120px;
+  height: 2px;
+  background: linear-gradient(90deg, white, transparent);
+  animation: shoot 3s linear forwards;
+  z-index: 2;
+}
+
+@keyframes shoot {
+  from {
+    transform: translate(0, 0) rotate(-45deg);
+    opacity: 1;
+  }
+  to {
+    transform: translate(-600px, 600px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+
+/* ===============================
+   UPSIDE DOWN BACKGROUND
+================================ */
+/* ===============================
+   UPSIDE DOWN – DARK ABYSS MODE
+================================ */
+body.upside {
+  background:
+    radial-gradient(circle at 25% 20%, rgba(60,60,90,0.25), transparent 45%),
+    radial-gradient(circle at 75% 80%, rgba(20,20,40,0.35), transparent 50%),
+    linear-gradient(
+      to bottom,
+      #050508,
+      #020204,
+      #000000
+    );
+
+  color: #c7c9d3;
+}
+
+
+/* ===============================
+   UPSIDE TOGGLE BUTTON
+================================ */
+.upside-toggle {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 9999;
+  padding: 12px 22px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(135deg, #7f1d1d, #dc2626);
+  color: white;
+  box-shadow: 0 0 25px rgba(255,0,0,0.7);
+}
+
+/* ===============================
+   REAL THUNDER SVG
+================================ */
+.thunder-svg {
+  position: fixed;
+  top: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.thunder-main {
+  fill: none;
+  stroke: #fff5f5;
+  stroke-width: 3.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  filter:
+    drop-shadow(0 0 6px #ff3b3b)
+    drop-shadow(0 0 18px #ff0000)
+    drop-shadow(0 0 36px rgba(255,0,0,0.8));
+  animation: lightningStrike 0.8s ease-out forwards;
+}
+
+.thunder-branch {
+  fill: none;
+  stroke: #ffdada;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  filter:
+    drop-shadow(0 0 6px #ff4d4d)
+    drop-shadow(0 0 14px rgba(255,0,0,0.8));
+  animation: lightningStrike 0.9s ease-out forwards;
+}
+
+/* DRAW ANIMATION */
+@keyframes lightningStrike {
+  0% { stroke-dashoffset: 1400; opacity: 0 }
+  10% { opacity: 1 }
+  100% { stroke-dashoffset: 0; opacity: 0 }
+}
+
+/* ===============================
+   THUNDER FLASH
+================================ */
+body.thunder-flash::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(255,60,60,0.25);
+  z-index: 4;
+  pointer-events: none;
+}
+/* ===============================
+   UPSIDE MODE – RED SHADOWS FOR BOXES
+================================ */
+
+/* Generic card / box selectors */
+body.upside .card,
+body.upside .box,
+body.upside .section-card,
+body.upside .edu-card,
+body.upside .tech-card,
+body.upside .cert-card,
+body.upside .project-card {
+  box-shadow:
+    0 0 18px rgba(180, 0, 0, 0.45),
+    0 0 45px rgba(120, 0, 0, 0.35),
+    inset 0 0 12px rgba(80, 0, 0, 0.35);
+  border-color: rgba(160, 0, 0, 0.6);
+}
+

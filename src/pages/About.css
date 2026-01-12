@@ -1,0 +1,241 @@
+.about-page {
+  max-width: 1100px;
+}
+
+/* TOP ABOUT */
+.about-top {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  flex: 1.4;
+}
+/* ===============================
+   REMOVE BULLET DOTS (ABOUT DETAILS)
+================================ */
+
+.about-details {
+  list-style: none;      /* removes dots */
+  padding-left: 0;       /* removes left indent */
+  margin: 0 0 1.5rem;
+}
+
+.about-details li {
+  margin-bottom: 0.5rem;
+  color: #cbd5f5;
+  font-size: 1rem;
+}
+
+.about-title {
+  font-size: 2.6rem;        /* was 2rem */
+  font-weight: 800;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+
+.about-desc {
+  position: relative;
+
+  font-size: 1.1rem;        /* bigger text */
+  line-height: 1.9;
+  color: #cbd5f5;
+
+  max-width: 640px;
+  padding: 1.4rem 1.6rem;
+  margin-top: 1rem;
+
+  background: linear-gradient(
+    145deg,
+    rgba(15, 23, 42, 0.65),
+    rgba(2, 6, 23, 0.65)
+  );
+
+  border-radius: 16px;
+  border-left: 4px solid var(--accent);
+
+  box-shadow:
+    0 0 18px rgba(99,102,241,0.25),
+    inset 0 0 12px rgba(0,0,0,0.4);
+}
+
+body.upside .about-desc {
+  background: linear-gradient(
+    145deg,
+    rgba(40, 0, 0, 0.65),
+    rgba(10, 0, 0, 0.65)
+  );
+
+  border-left-color: #dc2626;
+
+  box-shadow:
+    0 0 22px rgba(180, 0, 0, 0.45),
+    inset 0 0 14px rgba(0,0,0,0.6);
+}
+.about-desc::before {
+  content: "“";
+  position: absolute;
+  top: -18px;
+  left: 12px;
+  font-size: 3.5rem;
+  color: var(--accent);
+  opacity: 0.4;
+}
+
+body.upside .about-desc::before {
+  color: #dc2626;
+}
+
+
+/* IMAGE CARD */
+.about-image-card {
+  flex: 1;
+  max-width: 320px;
+  background: linear-gradient(145deg, #020617, #0f172a);
+  border: 1px solid rgba(124,124,255,0.25);
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+  
+}
+
+.about-image-card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+/* SECTIONS */
+.about-section {
+  margin-bottom: 4rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+/* EDUCATION */
+.education-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.edu-card {
+  background: linear-gradient(145deg, #020617, #0f172a);
+  border: 1px solid rgba(124,124,255,0.25);
+  border-radius: 18px;
+  padding: 1.4rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.edu-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 45px rgba(0,0,0,0.6);
+  border-color: var(--accent);
+}
+
+.edu-card img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 0.8rem;
+}
+
+.edu-card p {
+  color: #9ca3af;
+  margin: 0.3rem 0;
+}
+
+.edu-card span {
+  font-weight: 600;
+  color: #cbd5f5;
+}
+/* ===============================
+   FORCE SKILLS VISIBILITY (FINAL)
+================================ */
+
+/* Wrapper */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/* Each skill row */
+.skill-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+/* Top row */
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Text */
+.skill-top span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #ffffff !important; /* FORCE */
+}
+
+/* Skill bar container */
+.skill-bar {
+  width: 100%;
+  height: 14px;
+
+  background: rgba(255, 255, 255, 0.15) !important; /* VERY VISIBLE */
+  border-radius: 10px;
+  overflow: hidden;
+
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.8);
+}
+
+/* Filled bar */
+.skill-fill {
+  height: 100%;
+  width: 0;
+
+  background: linear-gradient(
+    90deg,
+    #60a5fa,
+    #3b82f6
+  ) !important;
+
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(59,130,246,0.8);
+
+  transition: width 1.2s ease-in-out;
+}
+
+/* ===============================
+   UPSIDE MODE – RED SKILLS
+================================ */
+
+body.upside .skill-top span {
+  color: #fecaca !important;
+}
+
+body.upside .skill-bar {
+  background: rgba(255, 80, 80, 0.18) !important;
+}
+
+body.upside .skill-fill {
+  background: linear-gradient(
+    90deg,
+    #ef4444,
+    #7f1d1d
+  ) !important;
+
+  box-shadow: 0 0 14px rgba(220,38,38,0.9);
+}

@@ -1,0 +1,25 @@
+.app {
+  min-height: 100vh;
+}
+
+.page-content {
+  padding-top: 60px; /* height of navbar */
+}
+
+/* Global page wrapper */
+/* ===============================
+   GLOBAL PAGE OFFSET (FIX NAVBAR CUT)
+================================ */
+.page {
+  padding-top: 76px;   /* MUST match navbar height */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+
+/* Each main section spacing */
+.section {
+  max-width: 1200px;
+  margin: 0 auto 120px auto;
+  padding: 0 24px;
+}

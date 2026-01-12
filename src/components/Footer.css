@@ -1,0 +1,106 @@
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+/* ICONS */
+.fixed-footer a {
+  color: #cbd5f5;
+  font-size: 1.35rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.fixed-footer a:hover {
+  transform: translateY(-4px) scale(1.15);
+  color: var(--accent);
+}
+
+/* ===============================
+   UPSIDE MODE
+================================ */
+body.upside .fixed-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(40, 0, 0, 0.85),
+    rgba(20, 0, 0, 0.95)
+  );
+}
+
+body.upside .fixed-footer a {
+  color: #fecaca;
+}
+
+body.upside .fixed-footer a:hover {
+  color: #f87171;
+}
+.fixed-footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 28px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(2, 6, 23, 0.85),
+    rgba(2, 6, 23, 0.95)
+  );
+
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+}
+
+/* ICONS */
+.fixed-footer a {
+  color: #cbd5f5;
+  font-size: 1.35rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.fixed-footer a:hover {
+  transform: translateY(-4px) scale(1.15);
+  color: var(--accent);
+}
+
+/* ===============================
+   UPSIDE MODE
+================================ */
+body.upside .fixed-footer {
+  background: linear-gradient(
+    180deg,
+    rgba(40, 0, 0, 0.85),
+    rgba(20, 0, 0, 0.95)
+  );
+}
+
+body.upside .fixed-footer a {
+  color: #fecaca;
+}
+
+body.upside .fixed-footer a:hover {
+  color: #f87171;
+}

@@ -1,0 +1,174 @@
+.tech-page {
+  max-width: 1100px;
+}
+
+.tech-title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+/* CAROUSEL */
+.tech-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0 3rem;
+}
+
+.tech-track {
+  display: flex;
+  gap: 2rem;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* TECH CARD */
+.tech-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #020617, #0f172a);
+  border: 1px solid rgba(124,124,255,0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  flex-shrink: 0;
+  transform: scale(0.85);
+  opacity: 0.6;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    box-shadow 0.6s ease;
+}
+
+.tech-card.active {
+  transform: scale(1.15);
+  opacity: 1;
+  box-shadow: 0 0 40px rgba(124,124,255,0.6);
+  border-color: var(--accent);
+}
+
+/* LOGO */
+.tech-card img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+}
+
+/* NAME */
+.tech-card span {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* SCORES */
+.scores-title {
+  margin-top: 4rem;
+}
+
+.scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.8rem;
+}
+
+.score-card {
+  background: linear-gradient(145deg, #020617, #0f172a);
+  border: 1px solid rgba(124,124,255,0.25);
+  border-radius: 18px;
+  padding: 1.6rem;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.score-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+  border-color: var(--accent);
+}
+
+.score-card h3 {
+  margin-top: 0;
+}
+
+.score-card p {
+  font-size: 0.9rem;
+  color: #9ca3af;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .tech-card {
+    width: 160px;
+    height: 160px;
+  }
+}
+/* =====================================
+   UPSIDE DOWN MODE OVERRIDES
+   (reacts to body.upside)
+===================================== */
+
+/* TECH CARD – UPSIDE */
+body.upside .tech-card {
+  background: linear-gradient(145deg, #0a0202, #1a0606);
+  border-color: rgba(180, 0, 0, 0.45);
+  box-shadow:
+    0 0 18px rgba(160, 0, 0, 0.35),
+    inset 0 0 10px rgba(80, 0, 0, 0.35);
+}
+
+/* ACTIVE TECH CARD – UPSIDE */
+body.upside .tech-card.active {
+  box-shadow:
+    0 0 28px rgba(255, 40, 40, 0.85),
+    0 0 60px rgba(180, 0, 0, 0.6);
+  border-color: rgba(255, 60, 60, 0.9);
+}
+
+/* TECH NAME */
+body.upside .tech-card span {
+  color: #f2bcbc;
+}
+
+/* =====================================
+   SCORE / PROFILE CARDS – UPSIDE
+===================================== */
+
+body.upside .score-card {
+  background: linear-gradient(145deg, #0b0202, #190505);
+  border-color: rgba(160, 0, 0, 0.45);
+
+  box-shadow:
+    0 0 18px rgba(140, 0, 0, 0.35),
+    inset 0 0 12px rgba(80, 0, 0, 0.35);
+}
+
+body.upside .score-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow:
+    0 0 35px rgba(255, 0, 0, 0.8),
+    0 0 70px rgba(180, 0, 0, 0.6);
+  border-color: rgba(255, 60, 60, 0.9);
+}
+
+/* PROFILE TEXT */
+body.upside .score-card p {
+  color: #e0b0b0;
+}
+
+/* PROFILE TITLE */
+body.upside .score-card h3 {
+  color: #ffb4b4;
+}
+/* REMOVE UNDERLINES FROM PROFILE CARDS */
+.profile-card,
+.profile-card:hover,
+.profile-card:focus,
+.profile-card:active {
+  text-decoration: none;
+}

@@ -1,0 +1,124 @@
+.certs-page {
+  max-width: 1100px;
+}
+
+.cert-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* VIEWPORT */
+.cert-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+/* TRACK */
+.cert-track {
+  display: flex;
+  gap: 2.5rem;
+  transition: transform 0.8s ease-in-out;
+}
+
+/* BASE CIRCLE */
+.cert-circle {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, #020617, #0f172a);
+  border: 2px solid rgba(124,124,255,0.25);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+
+  flex-shrink: 0;
+  transform: scale(0.8);
+  opacity: 0.6;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease,
+    box-shadow 0.6s ease,
+    border-color 0.6s ease;
+}
+
+/* CENTER / ACTIVE */
+.cert-circle.active {
+  transform: scale(1.18);
+  opacity: 1;
+  box-shadow: 0 0 40px rgba(124,124,255,0.7);
+  border-color: var(--accent);
+  cursor: default;
+}
+
+/* LOGO */
+.cert-circle img {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+}
+
+/* TITLE */
+.cert-circle span {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+}
+
+/* BUTTON */
+.cert-btn {
+  margin-top: 6px;
+  font-size: 0.75rem;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 4px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.cert-btn:hover {
+  background: var(--accent);
+  color: #020617;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .cert-circle {
+    width: 170px;
+    height: 170px;
+  }
+
+  .cert-track {
+    gap: 1.5rem;
+  }
+}
+/* ===============================
+   UPSIDE MODE – CERTIFICATIONS RED SHADOW
+================================ */
+body.upside .cert-circle {
+  border-color: rgba(180, 0, 0, 0.35);
+}
+
+body.upside .cert-circle.active {
+  box-shadow:
+    0 0 30px rgba(180, 0, 0, 0.65),
+    0 0 60px rgba(120, 0, 0, 0.45);
+  border-color: rgba(200, 0, 0, 0.75);
+}
+
+/* BUTTON */
+body.upside .cert-btn {
+  color: #fecaca;
+  border-color: #dc2626;
+}
+
+body.upside .cert-btn:hover {
+  background: #dc2626;
+  color: #020617;
+}

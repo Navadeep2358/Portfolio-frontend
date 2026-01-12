@@ -1,0 +1,5 @@
+.typing {
+  color: var(--accent);
+  border-right: 2px solid var(--accent);
+  padding-right: 4px;
+}

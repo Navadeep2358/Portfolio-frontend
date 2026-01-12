@@ -1,0 +1,174 @@
+/* ===============================
+   TOP NAVBAR – NORMAL MODE
+================================ */
+.top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 76px;                 /* ⬆ increased */
+  padding: 0 2.4rem;            /* ⬆ more breathing space */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: linear-gradient(
+    90deg,
+    rgba(2, 6, 23, 0.92),
+    rgba(15, 23, 42, 0.95),
+    rgba(2, 6, 23, 0.92)
+  );
+
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  z-index: 1000;
+}
+
+/* ===============================
+   LOGO
+================================ */
+/* REMOVE UNDERLINE FROM LOGO */
+.logo {
+  text-decoration: none;   /* removes underline */
+  color: #e5e7eb;          /* keep same color */
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* ALSO REMOVE UNDERLINE ON HOVER / ACTIVE */
+.logo:hover,
+.logo:focus,
+.logo:active {
+  text-decoration: none;
+  color: #e5e7eb;
+}
+
+
+/* ===============================
+   NAV ACTIONS
+================================ */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;                    /* ⬆ more spacing */
+}
+
+/* ===============================
+   UPSIDE TOGGLE BUTTON
+================================ */
+.nav-upside-btn {
+  padding: 9px 22px;            /* ⬆ bigger button */
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 0.9rem;            /* ⬆ text size */
+  font-weight: 600;
+
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  box-shadow: 0 0 14px rgba(99,102,241,0.6);
+  color: #fff;
+}
+
+/* ===============================
+   RESUME BUTTON
+================================ */
+.resume-btn {
+  padding: 9px 22px;            /* ⬆ bigger */
+  border-radius: 999px;
+  border: 1px solid #60a5fa;
+
+  color: #93c5fd;
+  text-decoration: none;
+  font-size: 0.9rem;
+
+  transition: all 0.3s ease;
+}
+
+.resume-btn:hover {
+  background: rgba(96,165,250,0.15);
+}
+
+/* ===============================
+   HAMBURGER ICON
+================================ */
+.hamburger {
+  font-size: 1.7rem;            /* ⬆ bigger */
+  background: none;
+  border: none;
+  color: #e5e7eb;
+  cursor: pointer;
+}
+
+/* ===============================
+   FLOATING SIDE MENU
+================================ */
+.floating-menu {
+  position: fixed;
+  top: 88px;                    /* ⬆ below taller navbar */
+  right: 26px;
+
+  background: rgba(2,6,23,0.96);
+  border-radius: 18px;
+
+  padding: 1.4rem 1.6rem;       /* ⬆ bigger menu */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;                    /* ⬆ more spacing */
+
+  z-index: 999;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.65);
+}
+
+.floating-menu a {
+  text-decoration: none;
+  color: #cbd5f5;
+  font-size: 1.05rem;           /* ⬆ text size */
+}
+
+.floating-menu a.active {
+  color: #60a5fa;
+  font-weight: 600;
+}
+
+/* ===============================
+   UPSIDE DOWN MODE NAVBAR
+================================ */
+body.upside .top-navbar {
+  background: linear-gradient(
+    90deg,
+    rgba(20,0,0,0.95),
+    rgba(60,0,0,0.95),
+    rgba(20,0,0,0.95)
+  );
+
+  border-bottom: 1px solid rgba(255,80,80,0.25);
+}
+
+/* UPSIDE BUTTON */
+body.upside .nav-upside-btn {
+  background: linear-gradient(135deg, #7f1d1d, #dc2626);
+  box-shadow: 0 0 16px rgba(255,60,60,0.7);
+}
+
+/* UPSIDE RESUME BUTTON */
+body.upside .resume-btn {
+  border-color: #f87171;
+  color: #fecaca;
+}
+
+body.upside .resume-btn:hover {
+  background: rgba(255,80,80,0.15);
+}
+
+/* UPSIDE FLOATING MENU */
+body.upside .floating-menu {
+  background: rgba(30,0,0,0.96);
+}
+
+body.upside .floating-menu a.active {
+  color: #f87171;
+}
