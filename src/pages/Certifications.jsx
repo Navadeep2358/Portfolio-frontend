@@ -1,46 +1,27 @@
-import { useEffect, useRef, useState } from 'react'
-import './Certifications.css'
-
-/* LOGOS */
-import awsLogo from '../assets/certs/aws.jpg'
-import salesforceLogo from '../assets/certs/salesforce.png'
-import ciscoLogo from '../assets/certs/cisco.png'
-import linguaskillLogo from '../assets/certs/linguaskill.png'
-import azureLogo from '../assets/certs/azure.png'
-import nptelLogo from '../assets/certs/nptel.png'
-import silogo from '../assets/certs/silogo.png'
-import klLogo from '../assets/certs/klu.jpg'
-
-/* FILES / LINKS */
-import awsPdf from '../assets/certs/aws.pdf'
-import salesforcePdf from '../assets/certs/salesforce.pdf'
-import ciscoPdf from '../assets/certs/cisco.pdf'
-import linguaskillPdf from '../assets/certs/linguaskill.pdf'
-import azurePdf from '../assets/certs/azure.pdf'
-import nptelPdf from '../assets/certs/cloud-computing.pdf'
-import dtiPdf from '../assets/certs/dti-expo.pdf'
+import { useEffect, useRef, useState } from "react";
+import "./Certifications.css";
 
 const CertificationCarousel = ({ title, items }) => {
-  const [index, setIndex] = useState(0)
-  const intervalRef = useRef(null)
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
-    startAuto()
-    return stopAuto
+    startAuto();
+    return stopAuto;
     // eslint-disable-next-line
-  }, [])
+  }, []);
 
   const startAuto = () => {
-    if (intervalRef.current) return
+    if (intervalRef.current) return;
     intervalRef.current = setInterval(() => {
-      setIndex(prev => (prev + 1) % items.length)
-    }, 2800)
-  }
+      setIndex((prev) => (prev + 1) % items.length);
+    }, 2800);
+  };
 
   const stopAuto = () => {
-    clearInterval(intervalRef.current)
-    intervalRef.current = null
-  }
+    clearInterval(intervalRef.current);
+    intervalRef.current = null;
+  };
 
   return (
     <>
@@ -50,16 +31,16 @@ const CertificationCarousel = ({ title, items }) => {
         <div
           className="cert-track"
           style={{
-            transform: `translateX(calc(50% - ${(index + 0.5) * 260}px))`
+            transform: `translateX(calc(50% - ${(index + 0.5) * 260}px))`,
           }}
         >
           {items.map((cert, i) => {
-            const isActive = i === index
+            const isActive = i === index;
 
             return (
               <div
                 key={i}
-                className={`cert-circle ${isActive ? 'active' : ''}`}
+                className={`cert-circle ${isActive ? "active" : ""}`}
                 onMouseEnter={stopAuto}
                 onMouseLeave={startAuto}
                 onClick={() => setIndex(i)}
@@ -73,38 +54,53 @@ const CertificationCarousel = ({ title, items }) => {
                     target="_blank"
                     rel="noreferrer"
                     className="cert-btn"
-                    onClick={e => e.stopPropagation()}
+                    onClick={(e) => e.stopPropagation()}
                   >
                     View Certificate
                   </a>
                 )}
               </div>
-            )
+            );
           })}
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 const Certifications = () => {
   return (
     <section className="section certs-page">
-
       {/* GLOBAL CERTIFICATIONS */}
       <CertificationCarousel
         title="Global Certifications"
         items={[
-          { title: 'AWS', logo: awsLogo, link: awsPdf },
-          { title: 'Salesforce', logo: salesforceLogo, link: salesforcePdf },
-          { title: 'Cisco', logo: ciscoLogo, link: ciscoPdf },
-          { title: 'Linguaskill', logo: linguaskillLogo, link: linguaskillPdf },
-          { title: 'NPTEL – Cloud Computing', logo: nptelLogo, link: nptelPdf },
+          { title: "AWS", logo: "/certs/aws.jpg", link: "/certs/aws.pdf" },
           {
-            title: 'Smart Interviews',
-            logo: silogo,
-            link: 'https://smartinterviews.in/certificate/fe20ff6c'
-          }
+            title: "Salesforce",
+            logo: "/certs/salesforce.png",
+            link: "/certs/salesforce.pdf",
+          },
+          {
+            title: "Cisco",
+            logo: "/certs/cisco.png",
+            link: "/certs/cisco.pdf",
+          },
+          {
+            title: "Linguaskill",
+            logo: "/certs/linguaskill.png",
+            link: "/certs/linguaskill.pdf",
+          },
+          {
+            title: "NPTEL – Cloud Computing",
+            logo: "/certs/nptel.png",
+            link: "/certs/cloud-computing.pdf",
+          },
+          {
+            title: "Smart Interviews",
+            logo: "/certs/silogo.png",
+            link: "https://smartinterviews.in/certificate/fe20ff6c",
+          },
         ]}
       />
 
@@ -112,7 +108,11 @@ const Certifications = () => {
       <CertificationCarousel
         title="Internships"
         items={[
-          { title: 'Azure Internship', logo: azureLogo, link: azurePdf }
+          {
+            title: "Azure Internship",
+            logo: "/certs/azure.png",
+            link: "/certs/azure.pdf",
+          },
         ]}
       />
 
@@ -120,12 +120,15 @@ const Certifications = () => {
       <CertificationCarousel
         title="Hackathons"
         items={[
-          { title: 'DTI Expo – KL University', logo: klLogo, link: dtiPdf }
+          {
+            title: "DTI Expo – KL University",
+            logo: "/certs/klu.jpg",
+            link: "/certs/dti-expo.pdf",
+          },
         ]}
       />
-
     </section>
-  )
-}
+  );
+};
 
-export default Certifications
+export default Certifications;

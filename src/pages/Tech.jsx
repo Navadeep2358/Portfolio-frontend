@@ -1,24 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import "./Tech.css";
 
-/* TECH LOGOS */
-import reactLogo from "../assets/tech/react.webp";
-import javaLogo from "../assets/tech/java.jpg";
-import springLogo from "../assets/tech/spring.jpg";
-import mysqlLogo from "../assets/tech/mysql.jpg";
-import jsLogo from "../assets/tech/js.webp";
-import awsLogo from "../assets/tech/aws.webp";
-import gcpLogo from "../assets/tech/gcp.webp";
-
 /* TECH STACK */
 const techs = [
-  { name: "React.js", logo: reactLogo },
-  { name: "Java", logo: javaLogo },
-  { name: "Spring Boot", logo: springLogo },
-  { name: "MySQL", logo: mysqlLogo },
-  { name: "JavaScript", logo: jsLogo },
-  { name: "AWS / Cloud", logo: awsLogo },
-  { name: "Google Cloud (GCP)", logo: gcpLogo },
+  { name: "React.js", logo: "/tech/react.webp" },
+  { name: "Java", logo: "/tech/java.jpg" },
+  { name: "Spring Boot", logo: "/tech/spring.jpg" },
+  { name: "MySQL", logo: "/tech/mysql.jpg" },
+  { name: "JavaScript", logo: "/tech/js.webp" },
+  { name: "AWS / Cloud", logo: "/tech/aws.webp" },
+  { name: "Google Cloud (GCP)", logo: "/tech/gcp.webp" },
 ];
 
 /* CODING PROFILES */
