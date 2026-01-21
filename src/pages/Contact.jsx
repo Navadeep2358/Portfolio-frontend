@@ -22,7 +22,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch(
+     const res = await fetch(
   "https://portfolio-backend-257s.onrender.com/api/contact",
   {
     method: "POST",
@@ -30,6 +30,7 @@ const Contact = () => {
     body: JSON.stringify(formData),
   }
 );
+
 
       const data = await res.json();
 
