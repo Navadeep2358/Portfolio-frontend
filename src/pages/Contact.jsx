@@ -22,14 +22,12 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-     const res = await fetch(
-  "https://portfolio-backend-257s.onrender.com/api/contact",
-  {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(formData),
-  }
-);
+     const res = await fetch("https://portfolio-backend.vercel.app/api/contact", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ name, email, message })
+});
+
 
 
       const data = await res.json();
