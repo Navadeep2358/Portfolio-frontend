@@ -26,13 +26,14 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://portfolio-backend-257s.onrender.com/api/contact", {
+      const res = await fetch("https://portfolio-backend-production-09d2.up.railway.app/api/contact", {
   method: "POST",
   headers: {
-    "Content-Type": "application/json"
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify(formData)
+  body: JSON.stringify(formData),
 });
+
 
 
       const data = await res.json();
