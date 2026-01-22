@@ -19,33 +19,34 @@ const Contact = () => {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const res = await fetch("http://localhost:5000/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+  try {
+    const res = await fetch("https://portfolio-backend-1z64.onrender.com/api/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      alert("✅ Message sent successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
-
-      const data = await res.json();
-
-      if (res.ok) {
-        alert("✅ Message sent successfully!");
-        setFormData({
-          name: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        alert(data.message || "❌ Failed to send message");
-      }
-    } catch (error) {
-      alert("⚠️ Backend server not running");
-      console.error(error);
+    } else {
+      alert(data.message || "❌ Failed to send message");
     }
-  };
+  } catch (error) {
+    alert("⚠️ Unable to reach server");
+    console.error(error);
+  }
+};
+
 
   return (
     <section className="contact-section">
