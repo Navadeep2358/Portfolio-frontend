@@ -22,13 +22,11 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-     const res = await fetch("https://portfolio-backend.vercel.app/api/contact", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ name, email, message })
-});
-
-
+      const res = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
       const data = await res.json();
 
@@ -44,7 +42,7 @@ const Contact = () => {
         alert(data.message || "❌ Failed to send message");
       }
     } catch (error) {
-      alert("⚠️ Server error. Please try again later.");
+      alert("⚠️ Backend server not running");
       console.error(error);
     }
   };
