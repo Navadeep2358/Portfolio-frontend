@@ -125,6 +125,11 @@ const Certifications = () => {
             logo: "/certs/klu.jpg",
             link: "/certs/dti-expo.pdf",
           },
+           {
+            title: "VISA 24 hrs AI Hackathon",
+            logo: "/certs/iit logo.jpg",
+            link: "/certs/visa hackthon.pdf",
+          },
         ]}
       />
     </section>
