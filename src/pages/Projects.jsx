@@ -5,6 +5,35 @@ const Projects = () => {
     <section className="section projects-page">
       <h2 className="projects-title">Projects</h2>
 
+      <div className="project-row">
+  <div className="project-content">
+    <h3>Pranamithra – Doctor Appointment Booking System (AWS)</h3>
+
+    <p>
+      Pranamithra is a cloud-based doctor appointment booking system designed
+      to provide seamless healthcare access. The application is deployed on AWS
+      using EC2 with Load Balancing and Auto Scaling to ensure high availability,
+      scalability, and fault tolerance. It also integrates an intelligent chatbot
+      powered by Amazon Lex, enabling users to interact, book appointments, and
+      receive assistance through conversational AI.
+    </p>
+
+    <div className="project-links">
+       <a href="https://pranamithra.netlify.app/" target="_blank" rel="noopener noreferrer">
+        🌐 Live Demo
+      </a> 
+
+      <a
+        href="https://github.com/Navadeep2358/Pranamithra---frontend.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🚀 View on GitHub
+      </a>
+    </div>
+  </div>
+</div>
+
       {/* PROJECT 1 */}
       <div className="project-row">
         <div className="project-content">
@@ -23,35 +52,45 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              View on GitHub →
+              🚀 View on GitHub
             </a>
           </div>
         </div>
       </div>
 
       {/* PROJECT 2 */}
-      <div className="project-row">
-        <div className="project-content">
-          <h3>Cloud-Based Website (AWS)</h3>
-          <p>
-            This project demonstrates a scalable cloud-based web application
-            deployed on AWS. It uses EC2 instances with Load Balancing and
-            Auto Scaling to handle traffic efficiently. The setup ensures high
-            availability, fault tolerance, and optimized performance under
-            varying workloads.
-          </p>
+     <div className="project-row">
+  <div className="project-content">
+    <h3>BusBay – Bus Ticket Booking System (AWS)</h3>
 
-          <div className="project-links">
-            <a
-              href="https://github.com/Navadeep2358/bookmybus.git"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View on GitHub →
-            </a>
-          </div>
-        </div>
-      </div>
+    <p>
+      BusBay is a cloud-based bus ticket booking system developed using modern
+      web technologies and deployed on AWS. The application is built using a
+      vibe coding approach, focusing on clean design and smooth user experience.
+      It utilizes AWS services such as EC2, Load Balancer, and Auto Scaling to
+      ensure high availability, scalability, and reliable performance under
+      varying user traffic.
+    </p>
+
+    <div className="project-links">
+      <a
+        href="https://busbay.netlify.app/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🌐 Live Demo
+      </a>
+
+      <a
+        href="https://github.com/Navadeep2358/bookmybus.git"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        🚀 View on GitHub
+      </a>
+    </div>
+  </div>
+</div>
 
       {/* PROJECT 3 */}
       <div className="project-row">
@@ -71,7 +110,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              View on GitHub →
+              🚀 View on GitHub
             </a>
           </div>
         </div>
@@ -95,7 +134,7 @@ const Projects = () => {
               target="_blank"
               rel="noreferrer"
             >
-              View on GitHub →
+              🚀 View on GitHub
             </a>
           </div>
         </div>
