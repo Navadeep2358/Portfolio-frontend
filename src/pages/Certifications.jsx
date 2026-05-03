@@ -101,6 +101,11 @@ const Certifications = () => {
             logo: "/certs/silogo.png",
             link: "https://smartinterviews.in/certificate/fe20ff6c",
           },
+          {
+            title: "Aviatrix",
+            logo: "/certs/aviatrix.png",
+            link: "/certs/aviatrix.pdf",
+          },
         ]}
       />
 
@@ -129,6 +134,11 @@ const Certifications = () => {
             title: "VISA 24 hrs AI Hackathon",
             logo: "/certs/iit logo.jpg",
             link: "/certs/visa hackthon.pdf",
+          },
+          {
+            title: "Guidewire Devtrails Hackathon",
+            logo: "/certs/devtrails.png",
+            link: "/certs/gwire hackthon.pdf",
           },
         ]}
       />
